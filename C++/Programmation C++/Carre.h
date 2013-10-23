@@ -10,13 +10,13 @@ class Carre : public Parallelogramme {
 
  public:
 
-    virtual void Carre();
+    void Carre();
 
-    virtual void Carre(Point2D A, Point2D B, Point2D C, Point2D D);
+    void Carre(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    virtual void Carre(Segment segment);
+    void Carre(Segment segment);
 
-    virtual Boolean estCarre();
+    bool estCarre();
 };
 
 #endif // Carre_h

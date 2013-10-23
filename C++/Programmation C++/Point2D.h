@@ -7,27 +7,27 @@ class Point2D {
 
  public:
 
-    virtual void Point2D();
+    Point2D();
 
-    virtual void Point2D(Integer x, Integer y);
+    Point2D(int x, int y);
 
-    virtual Integer getX();
+    int getX();
 
-    virtual Integer getY();
+    int getY();
 
-    virtual void setX(Integer x);
+    void setX(int x);
 
-    virtual void setY(Integer y);
+    void setY(int y);
 
-    virtual Boolean estIdentique();
+    bool estIdentique();
 
 
  private:
-    Integer x;
-    Integer y;
+    int x;
+    int y;
 
  public:
-
+ 
     /**
      * @element-type Figure
      */
