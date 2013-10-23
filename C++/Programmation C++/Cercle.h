@@ -7,24 +7,27 @@
 
 class Cercle : public Figure {
 
- public:
 
-    virtual void Cercle();
+ private:
+    int rayon;
 
-    virtual void Cercle(Point2D point);
-
-    virtual void Cercle(Point2D point, Integer rayon);
-
-    virtual Integer getRayon();
-
-    virtual void setRayon(Integer rayon);
-
-    virtual void affiche();
-
-    virtual void translation(Point2D point);
 
  public:
-    Integer rayon;
+
+    Cercle();
+
+    Cercle(Point2D point);
+
+    Cercle(Point2D point, int rayon);
+
+    int getRayon();
+
+    void setRayon(int rayon);
+
+    void affiche();
+
+    void translation(Point2D point);
+
 };
 
 #endif // Cercle_h
