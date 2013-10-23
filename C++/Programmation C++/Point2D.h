@@ -1,8 +1,6 @@
 #ifndef Point2D_h
 #define Point2D_h
 
-class Figure;
-
 class Point2D {
 
  public:
@@ -19,19 +17,13 @@ class Point2D {
 
     void setY(int y);
 
-    bool estIdentique();
+    bool estIdentique(Point2D point);
 
 
  private:
     int x;
     int y;
-
- public:
  
-    /**
-     * @element-type Figure
-     */
-    Figure *utilise;
 };
 
 #endif // Point2D_h
