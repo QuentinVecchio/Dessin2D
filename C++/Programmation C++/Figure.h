@@ -6,31 +6,25 @@
 
 class Figure {
 
+ protected:
+    Point2D A;
+
  public:
 
-    virtual void Figure();
+    Figure();
 
-    virtual void Figure(Integer x, Integer y);
+    Figure(int x, int y);
 
-    virtual void Figure(Point2D point);
+    Figure(Point2D point);
 
     virtual void translation(Point2D point);
 
     virtual void affiche();
 
-    virtual Point2D getA();
+    Point2D getA();
 
-    virtual void setA(Point2D A);
+    void setA(Point2D A);
 
- public:
-    Point2D A;
-
- public:
-
-    /**
-     * @element-type Point2D
-     */
-    Point2D *utilise;
 };
 
 #endif // Figure_h
