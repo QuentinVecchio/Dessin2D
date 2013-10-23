@@ -1,5 +1,7 @@
 #include "Point2D.h"
+#include <iostream>
 
+using namespace std;
 
 Point2D::Point2D()
 {
@@ -47,5 +49,11 @@ void Point2D::translation(int x, int y){
 bool Point2D::estIdentique(Point2D point)
 {
 	return this->x == point.x && this->y == point.y;
+}
+
+void Point2D::affiche(){
+	cout << "Point:" << endl;
+	cout << "x:" << this->x << endl;
+	cout << "y:" << this->y << endl;
 }
 

@@ -23,6 +23,8 @@ class Point2D {
 
    bool estIdentique(Point2D point);
 
+	void affiche();
+
  private:
     int x;
     int y;

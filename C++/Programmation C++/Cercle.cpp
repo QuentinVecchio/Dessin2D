@@ -33,6 +33,6 @@ void Cercle::affiche()
 
 void Cercle::translation(Point2D point)
 {
-	Figure:translation(point);
+	Figure::translation(point);
 }
 

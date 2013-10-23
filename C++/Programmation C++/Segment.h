@@ -8,30 +8,26 @@
 
 class Segment : public Figure {
 
+ private:
+    Point2D B;
+
  public:
 
-    virtual void Segment();
-
-    virtual void Segment(Point2D A);
-
-    virtual void Segment(Point2D A, Point2D B);
+    Segment(Point2D A, Point2D B);
 
     virtual Point2D getB();
 
-    virtual void setB()(Point2D B);
+    virtual void setB(Point2D B);
 
     virtual void affiche();
 
     virtual void translation(Point2D point);
 
-    virtual Boolean estPerpendiculaire(Segment segment);
+    virtual bool estPerpendiculaire(Segment segment);
 
-    virtual Boolean estParallele(Segment segment);
+    virtual bool estParallele(Segment segment);
 
-    virtual Boolean seCoupe(Segment segment);
-
- public:
-    Point2D B;
+    virtual bool seCoupe(Segment segment);
 };
 
 #endif // Segment_h
