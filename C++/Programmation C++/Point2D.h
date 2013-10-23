@@ -5,20 +5,23 @@ class Point2D {
 
  public:
 
-    Point2D();
+   Point2D();
 
-    Point2D(int x, int y);
+   Point2D(int x, int y);
 
-    int getX();
+   int getX();
 
-    int getY();
+   int getY();
 
-    void setX(int x);
+   void setX(int x);
 
-    void setY(int y);
+   void setY(int y);
 
-    bool estIdentique(Point2D point);
+	void translation(Point2D t);
 
+	void translation(int x, int y); 
+
+   bool estIdentique(Point2D point);
 
  private:
     int x;

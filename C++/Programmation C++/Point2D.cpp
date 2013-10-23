@@ -33,6 +33,17 @@ void Point2D::setY(int y)
 	this->y = y;
 }
 
+void Point2D::translation(Point2D t){
+	this->x += t.getX();
+	this->y += t.getY();
+}
+
+void Point2D::translation(int x, int y){
+	this->x += x;
+	this->y += y;
+}
+
+
 bool Point2D::estIdentique(Point2D point)
 {
 	return this->x == point.x && this->y == point.y;

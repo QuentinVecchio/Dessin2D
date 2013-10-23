@@ -1,8 +1,6 @@
 #include "Figure.h"
 
 
-
-
 Figure::Figure()
 {
 	this->A = Point2D();
@@ -20,6 +18,7 @@ Figure::Figure(Point2D point)
 
 void Figure::translation(Point2D point)
 {
+	this->A.translation(point);
 }
 
 void Figure::affiche()
@@ -28,9 +27,11 @@ void Figure::affiche()
 
 Point2D Figure::getA()
 {
+	return this->A;
 }
 
 void Figure::setA(Point2D A)
 {
+	this->A = A;
 }
 
