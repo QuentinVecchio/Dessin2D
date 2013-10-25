@@ -1,7 +1,5 @@
 #include "Segment.h"
-#include <iostream>
 
-using namespace std;
 Segment::Segment(Point2D A, Point2D B):Figure(A),B(B)
 {
 }
@@ -16,8 +14,10 @@ void Segment::setB(Point2D B)
 	this->B = B;
 }
 
-void Segment::affiche()
+void Segment::affiche(ostream& flux)
 {
+	Figure::affiche(flux);
+	this->B.affiche(flux);
 }
 
 void Segment::translation(Point2D point)
@@ -28,6 +28,7 @@ void Segment::translation(Point2D point)
 
 bool Segment::estPerpendiculaire(Segment segment)
 {
+    return false;
 }
 
 bool Segment::estParallele(Segment segment)
@@ -53,5 +54,6 @@ bool Segment::estParallele(Segment segment)
 
 bool Segment::seCoupe(Segment segment)
 {
+    return false;
 }
 

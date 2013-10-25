@@ -1,5 +1,4 @@
 #include "Point2D.h"
-#include <iostream>
 
 using namespace std;
 
@@ -51,9 +50,9 @@ bool Point2D::estIdentique(Point2D point)
 	return this->x == point.x && this->y == point.y;
 }
 
-void Point2D::affiche(){
-	cout << "Point:" << endl;
-	cout << "x:" << this->x << endl;
-	cout << "y:" << this->y << endl;
+void Point2D::affiche(ostream& flux)
+{
+	flux << "(" << this->x << "," << this->y << ")" << endl;
 }
+
 

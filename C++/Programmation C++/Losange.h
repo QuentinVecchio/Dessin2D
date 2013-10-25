@@ -5,18 +5,16 @@
 #include "Point2D.h"
 #include "Segment.h"
 
-
+using namespace std;
 class Losange : public Parallelogramme {
 
  public:
 
-    virtual void Losange();
+    Losange(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    virtual void Losange(Point2D A, Point2D B, Point2D C, Point2D D);
+    //Losange(Segment segmentLong, Segment segmentLar);
 
-    virtual void Losange(Segment segmentLong, Segment segmentLar);
-
-    virtual Boolean estLosange();
+    bool estLosange();
 };
 
 #endif // Losange_h

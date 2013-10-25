@@ -5,16 +5,15 @@
 #include "Point2D.h"
 #include "Segment.h"
 
+using namespace std;
 
 class Carre : public Parallelogramme {
 
  public:
 
-    void Carre();
+    Carre(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    void Carre(Point2D A, Point2D B, Point2D C, Point2D D);
-
-    void Carre(Segment segment);
+    //Carre(Segment segment);
 
     bool estCarre();
 };

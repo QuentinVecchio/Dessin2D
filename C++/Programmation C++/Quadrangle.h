@@ -4,16 +4,15 @@
 #include "Point2D.h"
 #include "Quadrilatere.h"
 
+using namespace std;
 
 class Quadrangle : public Quadrilatere {
 
  public:
 
-    virtual void Quadrangle();
+    Quadrangle(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    virtual void Quadrangle(Point2D A, Point2D B, Point2D C, Point2D D);
-
-    virtual Boolean estQuadrangle();
+    bool estQuadrangle();
 };
 
 #endif // Quadrangle_h

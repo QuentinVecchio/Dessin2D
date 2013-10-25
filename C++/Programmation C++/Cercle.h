@@ -4,6 +4,7 @@
 #include "Figure.h"
 #include "Point2D.h"
 
+using namespace std;
 
 class Cercle : public Figure {
 

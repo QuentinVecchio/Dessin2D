@@ -4,31 +4,35 @@
 #include "Point2D.h"
 #include "Quadrilatere.h"
 #include "Segment.h"
-
+#include <iostream>
+#include <ostream>
+using namespace std;
 
 class Quadrilatere : public Segment {
 
  public:
 
-    virtual void Quadrilatere();
+    Quadrilatere(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    virtual void Quadrilatere(Point2D A, Point2D B, Point2D C, Quadrilatere D);
+    Point2D getC();
 
-    virtual Point2D getC();
+    Point2D getD();
 
-    virtual Point2D getD();
+    void setC(Point2D C);
+    
+    void setD(Point2D D);
+    
+    void affiche(ostream& flux);
 
-    virtual void setC(Point2D C);
+    void translation(Point2D point);
 
-    virtual void setD(Point2D D);
-
-    virtual void affiche();
-
-    virtual void translation(Point2D point);
-
- public:
+ private:
     Point2D C;
     Point2D D;
 };
-
+ostream& operator <<(ostream& flux, Quadrilatere q)
+{
+	q.affiche(flux);
+	return flux;
+}
 #endif // Quadrilatere_h

@@ -5,18 +5,16 @@
 #include "Segment.h"
 #include "Triangle.h"
 
-
+using namespace std;
 class TRectangle : public Triangle {
 
  public:
 
-    virtual void TRectangle();
+    TRectangle(Point2D A, Point2D B, Point2D C);
 
-    virtual void TRectangle(Point2D A, Point2D B, Point2D C);
+    TRectangle(Segment base, Point2D point );
 
-    virtual void TRectangle(Segment base, Point2D point );
-
-    virtual Boolean estTRectangle();
+    bool estTRectangle();
 };
 
 #endif // TRectangle_h

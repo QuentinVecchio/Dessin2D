@@ -3,30 +3,35 @@
 
 #include "Point2D.h"
 #include "Segment.h"
+#include <iostream>
+#include <ostream>
 
-
+using namespace std;
 class Triangle : public Segment {
 
  public:
 
-    virtual void Triangle();
+    Triangle(Point2D A, Point2D B, Point2D C);
 
-    virtual void Triangle(Point2D A, Point2D B, Point2D C);
+    Triangle(Segment base, Point2D C);
 
-    virtual void Triangle(Segment base, Point2D point);
+    Point2D getC();
 
-    virtual Point2D getC();
+    void setC(Point2D C);
 
-    virtual void setC(Point2D C);
+    void affiche(ostream& flux);
 
-    virtual void affiche();
+    void translation(Point2D point);
 
-    virtual void translation(Point2D point);
+    bool estPlat();
 
-    virtual Boolean estPlat();
-
- public:
+ protected:
     Point2D C;
 };
 
+ostream& operator <<(ostream& flux, Triangle t)
+{
+	t.affiche(flux);
+	return flux;
+}
 #endif // Triangle_h

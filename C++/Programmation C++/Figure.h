@@ -2,8 +2,10 @@
 #define Figure_h
 
 #include "Point2D.h"
+#include <iostream>
+#include <ostream>
 
-
+using namespace std;
 class Figure {
 
  protected:
@@ -19,7 +21,7 @@ class Figure {
 
     virtual void translation(Point2D point);
 
-    virtual void affiche();
+    virtual void affiche(ostream& flux);
 
     Point2D getA();
 
@@ -27,4 +29,9 @@ class Figure {
 
 };
 
+ostream& operator <<(ostream& flux, Figure p)
+{
+	p.affiche(flux);
+	return flux;
+}
 #endif // Figure_h

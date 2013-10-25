@@ -5,18 +5,16 @@
 #include "Segment.h"
 #include "Triangle.h"
 
-
+using namespace std;
 class Equilateral : public Triangle {
 
  public:
 
-    virtual void Equilateral();
+    Equilateral(Point2D A, Point2D B, Point2D C);
 
-    virtual void Equilateral(Point2D A, Point2D B, Point2D C);
+    Equilateral(Segment base, Point2D point);
 
-    virtual void Equilateral(Segment base, Point2D point);
-
-    virtual Boolean estEquilateral();
+    bool estEquilateral();
 };
 
 #endif // Equilateral_h

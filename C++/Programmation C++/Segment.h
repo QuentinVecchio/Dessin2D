@@ -4,30 +4,36 @@
 #include "Figure.h"
 #include "Point2D.h"
 #include "Segment.h"
+#include <iostream>
+#include <ostream>
 
-
+using namespace std;
 class Segment : public Figure {
 
- private:
+ protected:
     Point2D B;
 
  public:
 
     Segment(Point2D A, Point2D B);
 
-    virtual Point2D getB();
+    Point2D getB();
 
-    virtual void setB(Point2D B);
+    void setB(Point2D B);
 
-    virtual void affiche();
+    void affiche(ostream& flux);
 
-    virtual void translation(Point2D point);
+    void translation(Point2D point);
 
-    virtual bool estPerpendiculaire(Segment segment);
+    bool estPerpendiculaire(Segment segment);
 
-    virtual bool estParallele(Segment segment);
+    bool estParallele(Segment segment);
 
-    virtual bool seCoupe(Segment segment);
+    bool seCoupe(Segment segment);
 };
-
+ostream& operator <<(ostream& flux, Segment s)
+{
+	s.affiche(flux);
+	return flux;
+}
 #endif // Segment_h

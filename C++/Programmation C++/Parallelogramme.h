@@ -5,18 +5,16 @@
 #include "Quadrilatere.h"
 #include "Segment.h"
 
-
+using namespace std;
 class Parallelogramme : public Quadrilatere {
 
  public:
 
-    virtual void Parallelogramme();
+    Parallelogramme(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    virtual void Parallelogramme(Point2D A, Point2D B, Point2D C, Point2D D);
+    //Parallelogramme(Segment segmentLong, Segment segmentLar);
 
-    virtual void Parallelogramme(Segment segmentLong, Segment segmentLar);
-
-    virtual Boolean estParallelogramme();
+    bool estParallelogramme();
 };
 
 #endif // Parallelogramme_h

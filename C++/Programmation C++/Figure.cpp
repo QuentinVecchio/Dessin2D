@@ -1,6 +1,5 @@
 #include "Figure.h"
 
-
 Figure::Figure()
 {
 	this->A = Point2D();
@@ -21,8 +20,9 @@ void Figure::translation(Point2D point)
 	this->A.translation(point);
 }
 
-void Figure::affiche()
+void Figure::affiche(ostream& flux)
 {
+	this->A.affiche(flux);
 }
 
 Point2D Figure::getA()
@@ -34,4 +34,3 @@ void Figure::setA(Point2D A)
 {
 	this->A = A;
 }
-

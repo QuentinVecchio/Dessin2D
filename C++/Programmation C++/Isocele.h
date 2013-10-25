@@ -5,18 +5,16 @@
 #include "Segment.h"
 #include "Triangle.h"
 
-
+using namespace std;
 class Isocele : public Triangle {
 
  public:
 
-    virtual void Isocele();
+    Isocele(Point2D A, Point2D B, Point2D C);
 
-    virtual void Isocele(Point2D A, Point2D B, Point2D C);
+    Isocele(Segment base, Point2D point);
 
-    virtual void Isocele(Segment base, Point2D point);
-
-    virtual Boolean estIsocele();
+    bool estIsocele();
 };
 
 #endif // Isocele_h
