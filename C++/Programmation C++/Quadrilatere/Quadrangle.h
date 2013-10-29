@@ -1,7 +1,7 @@
 #ifndef Quadrangle_h
 #define Quadrangle_h
 
-#include "Point2D.h"
+#include "../Base/Point2D.h"
 #include "Quadrilatere.h"
 
 using namespace std;

@@ -1,9 +1,9 @@
 #ifndef Quadrilatere_h
 #define Quadrilatere_h
 
-#include "Point2D.h"
+#include "../Base/Point2D.h"
 #include "Quadrilatere.h"
-#include "Segment.h"
+#include "../Base/Segment.h"
 #include <iostream>
 #include <ostream>
 using namespace std;
@@ -22,7 +22,7 @@ class Quadrilatere : public Segment {
     
     void setD(Point2D D);
     
-    void affiche(ostream& flux);
+    void affiche(ostream& flux) const;
 
     void translation(Point2D point);
 
@@ -30,9 +30,5 @@ class Quadrilatere : public Segment {
     Point2D C;
     Point2D D;
 };
-ostream& operator <<(ostream& flux, Quadrilatere q)
-{
-	q.affiche(flux);
-	return flux;
-}
+
 #endif // Quadrilatere_h

@@ -2,8 +2,8 @@
 #define Rectangle_h
 
 #include "Parallelogramme.h"
-#include "Point2D.h"
-#include "Segment.h"
+#include "../Base/Point2D.h"
+#include "../Base/Segment.h"
 
 using namespace std;
 class Rectangle : public Parallelogramme {

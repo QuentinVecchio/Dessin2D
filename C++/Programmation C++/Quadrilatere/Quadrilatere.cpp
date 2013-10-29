@@ -24,7 +24,7 @@ void Quadrilatere::setD(Point2D D)
     this->D = D;
 }
 
-void Quadrilatere::affiche(ostream& flux)
+void Quadrilatere::affiche(ostream& flux) const
 {
     Segment::affiche(flux);
     this->C.affiche(flux);
@@ -36,5 +36,11 @@ void Quadrilatere::translation(Point2D point)
     Segment::translation(point);
 	this->C.translation(point);
     this->D.translation(point);
+}
+
+ostream& operator <<(ostream& flux, const Quadrilatere& q)
+{
+	q.affiche(flux);
+	return flux;
 }
 

@@ -1,9 +1,9 @@
 #ifndef Parallelogramme_h
 #define Parallelogramme_h
 
-#include "Point2D.h"
+#include "../Base/Point2D.h"
 #include "Quadrilatere.h"
-#include "Segment.h"
+#include "../Base/Segment.h"
 
 using namespace std;
 class Parallelogramme : public Quadrilatere {
