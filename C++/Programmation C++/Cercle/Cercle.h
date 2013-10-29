@@ -1,8 +1,8 @@
 #ifndef Cercle_h
 #define Cercle_h
 
-#include "Figure.h"
-#include "Point2D.h"
+#include "../Base/Figure.h"
+#include "../Base/Point2D.h"
 
 using namespace std;
 
