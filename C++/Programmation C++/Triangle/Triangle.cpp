@@ -19,7 +19,7 @@ void Triangle::setC(Point2D C)
 	this->C = C;
 }
 
-void Triangle::affiche(ostream& flux)
+void Triangle::affiche(ostream& flux) const
 {
 	/*Segment::affiche(flux);
 	this->C.affiche(flux);
@@ -41,3 +41,10 @@ bool Triangle::estPlat()
 	}
 	return false;
 }
+
+ostream& operator <<(ostream& flux, const Triangle& t)
+{
+	t.affiche(flux);
+	return flux;
+}
+

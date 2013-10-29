@@ -1,16 +1,16 @@
 #include <iostream>
 
-#include "./Base/Point2D.h"
-#include "./Base/Figure.h"
-#include "./Base/Segment.h"
-#include "./Cercle/Cercle.h"
+#include "./Triangle/Triangle.h"
+#include "./Triangle/TRectangle.h"
+#include "./Triangle/Isocele.h"
+#include "./Triangle/Equilateral.h"
 using namespace std;
 
 int main()
 {
-	//cout << "Bienvenue:" << endl;
-	Cercle c(Point2D(2,3), 5);
-	cout << c;
-	Figure f(2,3);
+	Triangle t(Point2D(2,3),Point2D(3,3),Point2D(2,5));
+	TRectangle tr(Point2D(2,3),Point2D(3,3),Point2D(2,5));
+	Isocele i (Point2D(2,3),Point2D(3,3),Point2D(2,5));
+	Equilateral e (Point2D(2,3),Point2D(3,3),Point2D(2,5));
 	return 0;
 }

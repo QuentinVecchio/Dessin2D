@@ -1,8 +1,8 @@
 #ifndef Triangle_h
 #define Triangle_h
 
-#include "Point2D.h"
-#include "Segment.h"
+#include "../Base/Point2D.h"
+#include "../Base/Segment.h"
 #include <iostream>
 #include <ostream>
 
@@ -19,7 +19,7 @@ class Triangle : public Segment {
 
     void setC(Point2D C);
 
-    void affiche(ostream& flux);
+    void affiche(ostream& flux) const;
 
     void translation(Point2D point);
 
@@ -29,9 +29,4 @@ class Triangle : public Segment {
     Point2D C;
 };
 
-ostream& operator <<(ostream& flux, Triangle t)
-{
-	t.affiche(flux);
-	return flux;
-}
 #endif // Triangle_h

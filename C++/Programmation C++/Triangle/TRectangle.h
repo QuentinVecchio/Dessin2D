@@ -1,8 +1,8 @@
 #ifndef TRectangle_h
 #define TRectangle_h
 
-#include "Point2D.h"
-#include "Segment.h"
+#include "../Base/Point2D.h"
+#include "../Base/Segment.h"
 #include "Triangle.h"
 
 using namespace std;

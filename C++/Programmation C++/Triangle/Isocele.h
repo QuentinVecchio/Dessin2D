@@ -1,8 +1,8 @@
 #ifndef Isocele_h
 #define Isocele_h
 
-#include "Point2D.h"
-#include "Segment.h"
+#include "../Base/Point2D.h"
+#include "../Base/Segment.h"
 #include "Triangle.h"
 
 using namespace std;
