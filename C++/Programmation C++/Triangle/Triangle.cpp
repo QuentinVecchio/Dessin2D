@@ -21,10 +21,8 @@ void Triangle::setC(Point2D C)
 
 void Triangle::affiche(ostream& flux) const
 {
-	/*Segment::affiche(flux);
+	Segment::affiche(flux);
 	this->C.affiche(flux);
-    */
-    //flux << "test" << endl;
 }
 
 void Triangle::translation(Point2D point)
