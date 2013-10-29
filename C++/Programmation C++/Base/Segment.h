@@ -21,7 +21,7 @@ class Segment : public Figure {
 
     void setB(Point2D B);
 
-    void affiche(ostream& flux);
+    void affiche(ostream& flux) const;
 
     void translation(Point2D point);
 
@@ -30,10 +30,7 @@ class Segment : public Figure {
     bool estParallele(Segment segment);
 
     bool seCoupe(Segment segment);
+
+ 	friend ostream& operator <<(ostream& flux, const Segment& s);
 };
-ostream& operator <<(ostream& flux, Segment s)
-{
-	s.affiche(flux);
-	return flux;
-}
 #endif // Segment_h

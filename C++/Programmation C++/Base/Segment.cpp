@@ -14,7 +14,7 @@ void Segment::setB(Point2D B)
 	this->B = B;
 }
 
-void Segment::affiche(ostream& flux)
+void Segment::affiche(ostream& flux) const
 {
 	Figure::affiche(flux);
 	this->B.affiche(flux);
@@ -56,4 +56,11 @@ bool Segment::seCoupe(Segment segment)
 {
     return false;
 }
+
+ostream& operator <<(ostream& flux, const Segment& s)
+{
+	s.affiche(flux);
+	return flux;
+}
+
 
