@@ -27,16 +27,14 @@ class Point2D {
 
    bool estIdentique(Point2D point);
 
-	void affiche(ostream& flux);
+	void affiche(ostream& flux) const;
+
+	friend ostream& operator <<(ostream& flux, const Point2D& p);
 
  private:
     int x;
     int y;
  
 };
-ostream& operator <<(ostream& flux, Point2D p)
-{
-	p.affiche(flux);
-	return flux;
-}
+
 #endif // Point2D_h

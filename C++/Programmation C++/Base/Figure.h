@@ -21,17 +21,14 @@ class Figure {
 
     virtual void translation(Point2D point);
 
-    virtual void affiche(ostream& flux);
+    virtual void affiche(ostream& flux) const;
 
     Point2D getA();
 
     void setA(Point2D A);
 
+	friend ostream& operator <<(ostream& flux, const Figure& p);
+
 };
 
-ostream& operator <<(ostream& flux, Figure p)
-{
-	p.affiche(flux);
-	return flux;
-}
 #endif // Figure_h

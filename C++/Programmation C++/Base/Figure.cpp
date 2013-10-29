@@ -20,7 +20,7 @@ void Figure::translation(Point2D point)
 	this->A.translation(point);
 }
 
-void Figure::affiche(ostream& flux)
+void Figure::affiche(ostream& flux) const
 {
 	this->A.affiche(flux);
 }
@@ -34,3 +34,10 @@ void Figure::setA(Point2D A)
 {
 	this->A = A;
 }
+
+ostream& operator <<(ostream& flux, const Figure& p)
+{
+	p.affiche(flux);
+	return flux;
+}
+

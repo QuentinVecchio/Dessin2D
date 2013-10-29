@@ -50,9 +50,14 @@ bool Point2D::estIdentique(Point2D point)
 	return this->x == point.x && this->y == point.y;
 }
 
-void Point2D::affiche(ostream& flux)
+void Point2D::affiche(ostream& flux) const
 {
 	flux << "(" << this->x << "," << this->y << ")" << endl;
 }
 
+ostream& operator <<(ostream& flux, const Point2D& p)
+{
+	p.affiche(flux);
+	return flux;
+}
 
