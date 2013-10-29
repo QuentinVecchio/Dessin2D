@@ -27,12 +27,20 @@ void Cercle::setRayon(int rayon)
 	this->rayon = rayon;
 }
 
-void Cercle::affiche()
+void Cercle::affiche(ostream& flux) const
 {
+	cout << "centre: " <<this->A;
+	cout << "rayon : "<< this->rayon << endl;
 }
 
 void Cercle::translation(Point2D point)
 {
 	Figure::translation(point);
+}
+
+ostream& operator <<(ostream& flux, const Cercle& c)
+{
+	c.affiche(flux);
+	return flux;
 }
 

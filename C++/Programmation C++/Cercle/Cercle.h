@@ -25,9 +25,11 @@ class Cercle : public Figure {
 
     void setRayon(int rayon);
 
-    void affiche();
+    void affiche(ostream& flux) const;
 
     void translation(Point2D point);
+
+	friend ostream& operator <<(ostream& flux, const Cercle& c);
 
 };
 
