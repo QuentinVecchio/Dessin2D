@@ -29,10 +29,40 @@ using namespace std;
 
 int main()
 {
-	Point2D p(2,3);
+	int x,y;
+	cout << "A:";
+	cin >> x;
+	cin >> y;
+	Point2D a(x,y);
+
+	cout << "B:";
+	cin >> x;
+	cin >> y;
+	Point2D b(x,y);
+
+	cout << "C:";
+	cin >> x;
+	cin >> y;
+	Point2D c(x,y);
+
+	cout << "D:";
+	cin >> x;
+	cin >> y;
+	Point2D d(x,y);
+
 	cout << "Bienvenue" <<endl;
 
-	cout << p <<endl;
+	Segment s1(a,b);
+	Segment s2(c,d);
+
+	if(s1.estParallele(s2)){
+		cout << "estParallele" << endl;
+	}else{
+		cout << "non" << endl;
+	}
+
+
+	/*cout << p <<endl;
 
 	Figure f(p);
 	cout << f << endl;
@@ -71,6 +101,6 @@ int main()
 	cout << qu << endl;
 
 	Rectangle r(Point2D(2,3), Point2D(3,2), Point2D(3,3), Point2D(2,2));
-	cout << r << endl;
+	cout << r << endl;*/
 	return 0;
 }

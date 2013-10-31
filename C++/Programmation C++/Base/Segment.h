@@ -6,7 +6,7 @@
 #include "Segment.h"
 #include <iostream>
 #include <ostream>
-
+#include <cmath>
 using namespace std;
 class Segment : public Figure {
 
