@@ -28,7 +28,13 @@ void Segment::translation(Point2D point)
 
 bool Segment::estPerpendiculaire(Segment segment)
 {
-    return false;
+	Point2D v1( this->A.getX() - this->B.getX(), 
+					this->A.getY() - this->B.getY());
+
+	Point2D v2( segment.getA().getX() - segment.getB().getX(), 
+					segment.getA().getY() - segment.getB().getY());
+	
+	return v1.getX() * v2.getX() + v2.getY() * v1.getY() == 0;
 }
 
 bool Segment::estParallele(Segment segment)

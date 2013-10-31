@@ -55,8 +55,8 @@ int main()
 	Segment s1(a,b);
 	Segment s2(c,d);
 
-	if(s1.estParallele(s2)){
-		cout << "estParallele" << endl;
+	if(s1.estPerpendiculaire(s2)){
+		cout << "estPerpendiculaire" << endl;
 	}else{
 		cout << "non" << endl;
 	}
