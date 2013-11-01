@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Carre ca(a,b,c,d);
+	Rectangle ca(a,b,c,d);
 	cout << ca << endl;
-	if(ca.estCarre()){
-		cout << "estCarre" << endl;
+	if(ca.estRectangle()){
+		cout << "estRectangle" << endl;
 	}else{
-		cout << "non estCarre" << endl;
+		cout << "non estRectangle" << endl;
 	}
 	
 
