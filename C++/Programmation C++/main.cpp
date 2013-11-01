@@ -52,18 +52,22 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Segment s1(a,b);
-
-	cout << "longueur:" << s1.longueur() << endl;
-
+	Equilateral eq(a,b,c);
+	cout << eq << endl;
+	if(eq.estEquilateral()){
+		cout << "equilateral" << endl;
+	}else{
+		cout << "non equilateral" << endl;
+	}
+	
 
 	Segment s2(c,d);
 
-	if(s1.estPerpendiculaire(s2)){
+	/*if(s1.estPerpendiculaire(s2)){
 		cout << "estPerpendiculaire" << endl;
 	}else{
 		cout << "non" << endl;
-	}
+	}*/
 
 
 	/*cout << p <<endl;
