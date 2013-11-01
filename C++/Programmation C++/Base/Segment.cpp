@@ -59,7 +59,9 @@ ostream& operator <<(ostream& flux, const Segment& s)
 	return flux;
 }
 
-float longueur(){
-	return 0.0;
+float Segment::longueur(){
+	int deltaX = this->B.getX()- this->A.getX();
+	int deltaY = this->B.getY()- this->A.getY();
+	return sqrt(deltaX*deltaX + deltaY*deltaY);
 }
 

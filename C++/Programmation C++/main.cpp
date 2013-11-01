@@ -53,6 +53,10 @@ int main()
 	cout << "Bienvenue" <<endl;
 
 	Segment s1(a,b);
+
+	cout << "longueur:" << s1.longueur() << endl;
+
+
 	Segment s2(c,d);
 
 	if(s1.estPerpendiculaire(s2)){
