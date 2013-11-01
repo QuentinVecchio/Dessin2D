@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Parallelogramme p(a,b,c,d);
-	cout << p << endl;
-	if(p.estParallelogramme()){
-		cout << "estParallelogramme" << endl;
+	Losange l(a,b,c,d);
+	cout << l << endl;
+	if(l.estLosange()){
+		cout << "estLosange" << endl;
 	}else{
-		cout << "non estParallelogramme" << endl;
+		cout << "non estLosange" << endl;
 	}
 	
 
