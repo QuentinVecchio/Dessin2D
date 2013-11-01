@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Losange l(a,b,c,d);
-	cout << l << endl;
-	if(l.estLosange()){
-		cout << "estLosange" << endl;
+	Carre ca(a,b,c,d);
+	cout << ca << endl;
+	if(ca.estCarre()){
+		cout << "estCarre" << endl;
 	}else{
-		cout << "non estLosange" << endl;
+		cout << "non estCarre" << endl;
 	}
 	
 
