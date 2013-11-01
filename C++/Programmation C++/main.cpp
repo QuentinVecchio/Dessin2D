@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Equilateral eq(a,b,c);
+	Isocele eq(a,b,c);
 	cout << eq << endl;
-	if(eq.estEquilateral()){
-		cout << "equilateral" << endl;
+	if(eq.estIsocele()){
+		cout << "iso" << endl;
 	}else{
-		cout << "non equilateral" << endl;
+		cout << "non iso" << endl;
 	}
 	
 
