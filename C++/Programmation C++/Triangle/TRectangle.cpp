@@ -10,5 +10,8 @@ TRectangle::TRectangle(Segment base, Point2D point ) : Triangle(base,point)
 
 bool TRectangle::estTRectangle()
 {
-    return false;
+	Segment s1(A,B);
+	Segment s2(A,C);
+	Segment s3(B,C);
+	return s1.estPerpendiculaire(s2) || s1.estPerpendiculaire(s3) || s2.estPerpendiculaire(s3);
 }

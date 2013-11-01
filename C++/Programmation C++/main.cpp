@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	Isocele eq(a,b,c);
+	TRectangle eq(a,b,c);
 	cout << eq << endl;
-	if(eq.estIsocele()){
-		cout << "iso" << endl;
+	if(eq.estTRectangle()){
+		cout << "estTRectangle" << endl;
 	}else{
-		cout << "non iso" << endl;
+		cout << "non estTRectangle" << endl;
 	}
 	
 
