@@ -12,8 +12,6 @@ class Losange : public Parallelogramme {
 
     Losange(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    //Losange(Segment segmentLong, Segment segmentLar);
-
     bool estLosange();
 };
 

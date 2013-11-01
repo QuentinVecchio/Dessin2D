@@ -31,6 +31,8 @@ class Segment : public Figure {
 
     bool seCoupe(Segment segment);
 
+	 float longueur();
+
  	friend ostream& operator <<(ostream& flux, const Segment& s);
 };
 #endif // Segment_h

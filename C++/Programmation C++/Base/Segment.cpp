@@ -59,4 +59,7 @@ ostream& operator <<(ostream& flux, const Segment& s)
 	return flux;
 }
 
+float longueur(){
+	return 0.0;
+}
 

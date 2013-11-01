@@ -12,8 +12,6 @@ class Parallelogramme : public Quadrilatere {
 
     Parallelogramme(Point2D A, Point2D B, Point2D C, Point2D D);
 
-    //Parallelogramme(Segment segmentLong, Segment segmentLar);
-
     bool estParallelogramme();
 };
 
