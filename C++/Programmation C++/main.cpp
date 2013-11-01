@@ -52,12 +52,12 @@ int main()
 
 	cout << "Bienvenue" <<endl;
 
-	TRectangle eq(a,b,c);
-	cout << eq << endl;
-	if(eq.estTRectangle()){
-		cout << "estTRectangle" << endl;
+	Parallelogramme p(a,b,c,d);
+	cout << p << endl;
+	if(p.estParallelogramme()){
+		cout << "estParallelogramme" << endl;
 	}else{
-		cout << "non estTRectangle" << endl;
+		cout << "non estParallelogramme" << endl;
 	}
 	
 

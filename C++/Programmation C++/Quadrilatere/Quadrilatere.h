@@ -26,7 +26,7 @@ class Quadrilatere : public Segment {
 
     void translation(Point2D point);
 
- private:
+ protected:
     Point2D C;
     Point2D D;
 };
