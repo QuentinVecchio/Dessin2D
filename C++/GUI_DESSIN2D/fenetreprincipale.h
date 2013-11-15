@@ -10,42 +10,53 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QString>
+#include <QMouseEvent>
+#include <QGraphicsSceneMouseEvent>
 #include "gui_point.h"
+#include "vuegraphique.h"
+#include "formsegment.h"
+#include "formcarre.h"
 #define TAILLE 100
 
 namespace Ui {
 class fenetrePrincipale;
 }
-enum Objet{SEGMENT, CARRE, TRIANGLE, CERCLE};
+enum Objet{SEGMENT, CARRE, TRIANGLE, CERCLE, MULTISEG, ELLIPSE, POLYGONE};//Enumeration des figures
 using namespace std;
 class fenetrePrincipale : public QMainWindow
 {
     Q_OBJECT
-
 public:
     explicit fenetrePrincipale(QWidget *parent = 0);
     ~fenetrePrincipale();
-    void afficheFormNvObj(int nb);
+    //Mes fonctions
+        void afficheFormNvObj(int nb);
+        void traceRec();
+        void traceSeg();
+        void traceCercle();
+        void traceTri();
+        void traceMultiSeg();
 private slots:
-    void on_btnSegment_clicked();
-    void annuleNouveauObjet();
-    void nouveauObjet();
-    void on_btnCarre_clicked();
-
+    //Slots personnels
+        void annuleNouveauObjet();
+        void nouveauObjet();
+    //Slots pour les btns de dessin
+        void on_btnSegment_clicked();
+        void on_btnCarre_clicked();
+        void on_btnMultiSegment_clicked();
+        void on_btnTriangle_clicked();
+    //Slots pour les actions du menus
 private:
-    Ui::fenetrePrincipale *ui;
-    QGraphicsScene *scene;
-    Objet obj;
+    //Variables
+        Ui::fenetrePrincipale *ui;
+        Objet obj;
+        QPen *pen1;
+        QPen *pen2;
+    //Fonctions privées
+        void changePosCurseur(int x,int y);
     //Formulaire Objets
-        QWidget *conteneur;
-        QVBoxLayout *boxPrincipale;
-        GuiPoint *points[TAILLE];
-        QHBoxLayout * nomLayout;
-        QLabel * nomLabel;
-        QLineEdit *lineNom;
-        QHBoxLayout *btnLayout;
-        QPushButton *btnValide;
-        QPushButton *btnAnnule;
+        formSegment *formSeg;
+        formCarre *formCar;
 };
 
 #endif // FENETREPRINCIPALE_H

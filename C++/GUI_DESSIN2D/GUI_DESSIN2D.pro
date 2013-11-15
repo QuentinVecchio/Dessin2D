@@ -14,10 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         fenetreprincipale.cpp \
-    gui_point.cpp
+    gui_point.cpp \
+    vuegraphique.cpp \
+    formsegment.cpp \
+    formcarre.cpp
 
 HEADERS  += fenetreprincipale.h \
-    gui_point.h
+    gui_point.h \
+    vuegraphique.h \
+    formsegment.h \
+    formcarre.h
 
 FORMS    += fenetreprincipale.ui
 

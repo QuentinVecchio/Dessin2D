@@ -13,12 +13,15 @@ class GuiPoint : public QWidget
 {
 public:
     GuiPoint();
+    void reinit();
+    void detruit();
     QHBoxLayout *pointLayout;
     QLabel *labelPoint;
     QLabel *labelx;
     QSpinBox *ptx;
     QLabel *labely;
     QSpinBox *pty;
+
 };
 
 #endif // GUI_POINT_H
