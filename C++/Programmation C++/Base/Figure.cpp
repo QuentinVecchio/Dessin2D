@@ -11,7 +11,7 @@ Figure::Figure()
 	this->A = Point2D();
 }
 
-Figure::Figure(int x, int y)
+Figure::Figure(float x, float y)
 {
 	this->A = Point2D(x,y);
 }

@@ -14,28 +14,28 @@ Point2D::Point2D()
 	this->y = 0;
 }
 
-Point2D::Point2D(int x, int y)
+Point2D::Point2D(float x, float y)
 {
 	this->x = x;
 	this->y = y;
 }
 
-int Point2D::getX()
+float Point2D::getX()
 {
 	return this->x;
 }
 
-int Point2D::getY()
+float Point2D::getY()
 {
 	return this->y;
 }
 
-void Point2D::setX(int x)
+void Point2D::setX(float x)
 {
 	this->x = x;
 }
  
-void Point2D::setY(int y)
+void Point2D::setY(float y)
 {
 	this->y = y;
 }
@@ -45,15 +45,15 @@ void Point2D::translation(Point2D t){
 	this->y += t.getY();
 }
 
-void Point2D::translation(int x, int y){
+void Point2D::translation(float x, float y){
 	this->x += x;
 	this->y += y;
 }
 
 
-bool Point2D::estIdentique(Point2D point)
+bool Point2D::estIdentique(Point2D pofloat)
 {
-	return this->x == point.x && this->y == point.y;
+	return this->x == pofloat.x && this->y == pofloat.y;
 }
 
 void Point2D::affiche(ostream& flux) const

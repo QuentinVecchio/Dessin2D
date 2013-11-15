@@ -35,10 +35,10 @@ class Figure {
 
 	/**
 	*	Constructeur avec deux paramètres
-	*	@params int x, l'abscisse du point
-	*	@params int y, l'ordonnée du point
+	*	@params float x, l'abscisse du point
+	*	@params float y, l'ordonnée du point
 	*/
-    Figure(int x, int y);
+    Figure(float x, float y);
 
 	/**
 	*	Constructeur avec un point

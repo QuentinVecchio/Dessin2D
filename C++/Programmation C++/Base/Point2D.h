@@ -1,5 +1,5 @@
 /**
-*	Classe Point2D. Cette classe modélise un point positionné dans un environnement 2D
+*	Classe Point2D. Cette classe modélise un pofloat positionné dans un environnement 2D
 *
 *
 *       @Author Clin Matthieu
@@ -26,27 +26,27 @@ class Point2D {
 
 	/**
 	*	Constructeur avec comme paramètres les coordonnées du Point2D
-	*	@params float x, l'abscisse du point
-	*	@params float y, l'ordonnée du point
+	*	@params float x, l'abscisse du pofloat
+	*	@params float y, l'ordonnée du pofloat
 	*/
-   Point2D(int x, int y);
+   Point2D(float x, float y);
 
 	/**
 	*	Getters et setters de X et Y
 	*/
-   int getX();
+   float getX();
 
-   int getY();
+   float getY();
 
-   void setX(int x);
+   void setX(float x);
 
-   void setY(int y);
+   void setY(float y);
 
 
 	/**
-	*	Translation du point par rapport à un autre
-	*	On déplace le point suivant les coordonées du point donné
-	*	@params Point2D t, le point pour la translation
+	*	Translation du pofloat par rapport à un autre
+	*	On déplace le pofloat suivant les coordonées du pofloat donné
+	*	@params Point2D t, le pofloat pour la translation
 	*/
 	void translation(Point2D t);
 
@@ -55,18 +55,18 @@ class Point2D {
 	*	@params float x, le déplacement selon l'axe x
 	*	@params float y, le déplacement selon l'axe y
 	*/
-	void translation(int x, int y); 
+	void translation(float x, float y); 
 
 
 	/**
-	*	Fonction permettant de savoir si deux points sont placés aux mêmes endroit sur l'environnement 2D
-	*	@params Point2D point, le point à comparé avec l'objet courant
+	*	Fonction permettant de savoir si deux pofloats sont placés aux mêmes endroit sur l'environnement 2D
+	*	@params Point2D pofloat, le pofloat à comparé avec l'objet courant
 	*/
-   bool estIdentique(Point2D point);
+   bool estIdentique(Point2D pofloat);
 
 
 	/**
-	*	Fonction d'affichage du point
+	*	Fonction d'affichage du pofloat
 	*
 	*/
 	void affiche(ostream& flux) const;
@@ -74,8 +74,8 @@ class Point2D {
 	friend ostream& operator <<(ostream& flux, const Point2D& p);
 
  private:
-    int x;
-    int y;
+    float x;
+    float y;
  
 };
 
