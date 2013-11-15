@@ -1,4 +1,11 @@
+/**
+*       @Author Clin Matthieu
+*       @Author Vecchio Quentin
+*
+*       @version 1.0.0.0 on 2013-11-15
+*/
 #include "Segment.h"
+
 
 Segment::Segment(Point2D A, Point2D B):Figure(A),B(B)
 {
