@@ -1,3 +1,9 @@
+/**
+*       @Author Clin Matthieu
+*       @Author Vecchio Quentin
+*
+*       @version 1.0.0.0 on 2013-11-15
+*/
 #include "Cercle.h"
 
 
