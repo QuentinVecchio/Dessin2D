@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fenetrePrincipale</class>
+ <widget class="QMainWindow" name="fenetrePrincipale">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1010</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dessin2D</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>4</y>
+      <width>991</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,1,0,0">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <item row="0" column="2">
+      <widget class="QGraphicsView" name="view">
+       <property name="lineWidth">
+        <number>10</number>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="interactive">
+        <bool>true</bool>
+       </property>
+       <property name="sceneRect">
+        <rectf>
+         <x>0.000000000000000</x>
+         <y>0.000000000000000</y>
+         <width>200.000000000000000</width>
+         <height>100.000000000000000</height>
+        </rectf>
+       </property>
+       <property name="resizeAnchor">
+        <enum>QGraphicsView::AnchorViewCenter</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <layout class="QFormLayout" name="listeObjet">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+       </property>
+      </layout>
+     </item>
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="zoneBtnObjet">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="btnSegment">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/line.png</normaloff>
+           <normalon>:/icones/logos/line_focus.png</normalon>
+           <selectedon>:/icones/logos/line_focus.png</selectedon>:/icones/logos/line.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnMultiSegment">
+         <property name="minimumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/multiSegment.png</normaloff>:/icones/logos/multiSegment.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCarre">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/carre.png</normaloff>:/icones/logos/carre.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRectangle">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/quadrilatere.png</normaloff>:/icones/logos/quadrilatere.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnTriangle">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>4</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCercle">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/oval.png</normaloff>:/icones/logos/oval.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="3">
+      <layout class="QFormLayout" name="formObjet">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+       </property>
+       <property name="rowWrapPolicy">
+        <enum>QFormLayout::DontWrapRows</enum>
+       </property>
+       <property name="labelAlignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="formAlignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="barreMenu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1010</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionNouveau"/>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionEnregistrer"/>
+    <addaction name="actionImprimer"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter_3"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <addaction name="actionPlein_cran"/>
+    <addaction name="actionZoom"/>
+    <addaction name="actionZoom_2"/>
+    <addaction name="actionVue_ensemble"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+    <addaction name="actionTutoriels"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionD_veloppeur"/>
+   </widget>
+   <widget class="QMenu" name="menuOutils">
+    <property name="title">
+     <string>Outils</string>
+    </property>
+    <addaction name="actionCalculette"/>
+    <addaction name="actionMath_matique"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edition</string>
+    </property>
+    <addaction name="actionPr_c_dent"/>
+    <addaction name="actionSuivant"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuOutils"/>
+   <addaction name="menuAide"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="barreTache">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNouveau"/>
+   <addaction name="actionOuvrir"/>
+   <addaction name="actionEnregistrer"/>
+   <addaction name="separator"/>
+   <addaction name="actionPr_c_dent"/>
+   <addaction name="actionSuivant"/>
+   <addaction name="separator"/>
+   <addaction name="actionPlein_cran"/>
+   <addaction name="actionZoom"/>
+   <addaction name="actionZoom_2"/>
+   <addaction name="actionVue_ensemble"/>
+   <addaction name="separator"/>
+   <addaction name="actionCalculette"/>
+   <addaction name="actionMath_matique"/>
+   <addaction name="separator"/>
+   <addaction name="actionImprimer"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuitter_3"/>
+   <addaction name="actionTutoriels"/>
+   <addaction name="actionD_veloppeur"/>
+  </widget>
+  <widget class="QStatusBar" name="barreStatut"/>
+  <action name="actionNouveau">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/document.png</normaloff>:/icones/logos/document.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/folder.png</normaloff>:/icones/logos/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/55.png</normaloff>:/icones/logos/55.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enregistrer</string>
+   </property>
+  </action>
+  <action name="actionImprimer">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/printer.png</normaloff>:/icones/logos/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimer</string>
+   </property>
+  </action>
+  <action name="actionQuitter_3">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/power-button.png</normaloff>:/icones/logos/power-button.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionPlein_cran">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/resize.png</normaloff>:/icones/logos/resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plein écran</string>
+   </property>
+  </action>
+  <action name="actionTutoriels">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/question.png</normaloff>:/icones/logos/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tutoriels</string>
+   </property>
+  </action>
+  <action name="actionD_veloppeur">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/info.png</normaloff>:/icones/logos/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Développeur</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/34.png</normaloff>:/icones/logos/34.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom +</string>
+   </property>
+  </action>
+  <action name="actionZoom_2">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/35.png</normaloff>:/icones/logos/35.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom -</string>
+   </property>
+  </action>
+  <action name="actionVue_ensemble">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/33.png</normaloff>:/icones/logos/33.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vue ensemble</string>
+   </property>
+  </action>
+  <action name="actionCalculette">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/calculator.png</normaloff>:/icones/logos/calculator.png</iconset>
+   </property>
+   <property name="text">
+    <string>Calculette</string>
+   </property>
+  </action>
+  <action name="actionMath_matique">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/mathematical-instrument.png</normaloff>:/icones/logos/mathematical-instrument.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mathématique</string>
+   </property>
+  </action>
+  <action name="actionPr_c_dent">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/arrow-small-17.png</normaloff>:/icones/logos/arrow-small-17.png</iconset>
+   </property>
+   <property name="text">
+    <string>Précédent</string>
+   </property>
+  </action>
+  <action name="actionSuivant">
+   <property name="icon">
+    <iconset resource="ressources.qrc">
+     <normaloff>:/icones/logos/arrow-small-18.png</normaloff>:/icones/logos/arrow-small-18.png</iconset>
+   </property>
+   <property name="text">
+    <string>Suivant</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
