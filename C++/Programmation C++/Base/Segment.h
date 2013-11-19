@@ -10,7 +10,6 @@
 
 #include "Figure.h"
 #include "Point2D.h"
-#include "Segment.h"
 #include <iostream>
 #include <ostream>
 #include <cmath>
