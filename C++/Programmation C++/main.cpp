@@ -27,8 +27,45 @@
 
 using namespace std;
 
+Figure creerFigure(){
+
+	cout << "Création d'une figure" << endl;
+	cout << "Quelle figure voulez-vous creer ?" <<endl;
+	cout << "\t (1) Un segment" <<endl;
+	cout << "\t (2) Un cercle" << endl;
+	cout << "\t (3) Un Arc de Cercle" << endl;
+	cout << "\t (4) Un carré" << endl;
+	cout << "\t (5) Un losange" << endl;
+	cout << "\t (6) Un quadrangle" << endl;
+	cout << "\t (7) Un Rectangle" << endl;
+
+
+	Figure g;
+	return g;
+}
+
+
 int main()
 {
+
+	int choixInit;
+
+	cout << "Bienvenue dans notre application de dessin technique" << endl;
+	cout << "Que voulez-vous faire ?" <<endl;
+	cout << "\t (1) Créer une figure" <<endl;
+	cout << "\t (2) Créer un multisegment" << endl;
+	cout << "\t (3) Créer un dessin technique" << endl;
+	cout << "Votre choix:";
+	cin >> choixInit;
+
+	cout << endl;
+	while(choixInit < 1 || choixInit > 3){
+		cout << "Erreur lors du choix" << endl;
+		cout << "Votre choix:";
+		cin >> choixInit;	
+	}
+
+	/*
 	int x,y;
 	cout << "A:";
 	cin >> x;
