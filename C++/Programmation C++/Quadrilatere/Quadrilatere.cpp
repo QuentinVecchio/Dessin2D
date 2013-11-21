@@ -1,5 +1,7 @@
 #include "Quadrilatere.h"
 
+Quadrilatere::Quadrilatere(){}
+
 Quadrilatere::Quadrilatere(Point2D A, Point2D B, Point2D C, Point2D D) : Segment(A,B), C(C), D(D)
 {
 }

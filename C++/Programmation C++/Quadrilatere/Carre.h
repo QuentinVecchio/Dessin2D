@@ -17,6 +17,8 @@ class Carre : public Parallelogramme {
 
  public:
 
+	Carre();
+
 	/**
 	*	Constructeur de la class Carre
 	*	@params Point2D A, le point A du carré

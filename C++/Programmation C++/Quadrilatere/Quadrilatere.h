@@ -17,6 +17,8 @@ class Quadrilatere : public Segment {
 
  public:
 
+	Quadrilatere();
+
 	/**
 	*	Constructeur de la class quadrilatère
 	*	@params Point2D A, le point A du quadrilatère

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 
 /*Quadrilatere*/
 #include "./Quadrilatere/Carre.h"
@@ -27,7 +28,96 @@
 
 using namespace std;
 
-Figure creerFigure(){
+Point2D donnePoint(string nom){
+	
+	float x, y;
+	cout << "Définition du point " << nom << endl;
+	cout << "X:";
+	cin >> x;
+	cout << endl << "Y:";
+	cin >> y;
+	cout << endl;
+	return Point2D(x,y);
+}
+
+
+Segment creerSegment(){
+
+	Point2D a;
+	Point2D b;
+	a = donnePoint("A");
+	b = donnePoint("B");
+	return Segment(a,b);
+}
+
+Cercle creerCercle(){
+	Point2D o;
+	int a;
+	o = donnePoint("O");
+	cout << "Le rayon:";
+	cin >> a;
+	return Cercle(o, a); 
+	
+}
+
+ArcCercle creerArcCercle(){
+	Cercle c;
+	c = creerCercle();
+	Point2D depart;
+	depart = donnePoint("A");
+	float angle;
+	cout << "L'angle" << endl;
+	cin >> angle;
+	
+	return ArcCercle(c,angle,depart);
+}
+
+Parallelogramme creerParallelogramme(){
+	Point2D a,b,c,d;
+	a = donnePoint("A");
+	b = donnePoint("B");
+	c = donnePoint("C");
+	d = donnePoint("D");
+
+	return Parallelogramme(a,b,c,d);
+}
+
+Quadrangle creerQuadrangle(){
+	Point2D a,b,c,d;
+	a = donnePoint("A");
+	b = donnePoint("B");
+	c = donnePoint("C");
+	d = donnePoint("D");
+
+	return Quadrangle(a,b,c,d);
+}
+
+Carre creerCarre(){
+	Carre* c;
+
+	Parallelogramme q = creerParallelogramme();	
+	c = static_cast<Carre*>(&q);
+	return *c;
+}
+
+Losange creerLosange(){
+	Losange* l;
+
+	Parallelogramme q = creerParallelogramme();	
+	l = static_cast<Losange*>(&q);
+	return *l;
+
+}
+
+Rectangle creerRectangle(){
+	Rectangle* r;
+	
+	Parallelogramme q = creerParallelogramme();
+	r = static_cast<Rectangle*>(&q);
+	return *r;
+}
+
+Figure* creerFigure(){
 
 	cout << "Création d'une figure" << endl;
 	cout << "Quelle figure voulez-vous creer ?" <<endl;
@@ -39,9 +129,29 @@ Figure creerFigure(){
 	cout << "\t (6) Un quadrangle" << endl;
 	cout << "\t (7) Un Rectangle" << endl;
 
+	int choixFigure;
+	cout << "Votre choix:";
+	cin >> choixFigure;
+
+	while(choixFigure < 1 || choixFigure > 8){
+		cout << "Erreur lors du choix" << endl;
+		cout << "Votre choix:";
+		cin >> choixFigure;
+	}
 
 	Figure g;
-	return g;
+
+	switch(choixFigure){
+		case 1: { g = creerSegment(); break; }
+		case 2:	{ g = creerCercle();  break; }
+		case 3:	{ g = creerArcCercle();  break; }
+		case 4:	{ g = creerCarre();  break; }
+		case 5:	{ g = creerLosange();  break; }
+		case 6:	{ g = creerQuadrangle();  break; }
+		case 7:	{ g = creerRectangle();  break; }
+	}
+
+	return &g;
 }
 
 
@@ -64,6 +174,20 @@ int main()
 		cout << "Votre choix:";
 		cin >> choixInit;	
 	}
+
+	Figure* f;
+
+	switch (choixInit) 
+	{ 
+		case 1: { f = creerFigure(); break; } 
+		case 2: { cout <<"2";    break; } 
+		case 3: { cout << "3";   break; } 
+	} 
+
+
+
+	cout << "Affichage" << endl;
+	cout << (*f);
 
 	/*
 	int x,y;

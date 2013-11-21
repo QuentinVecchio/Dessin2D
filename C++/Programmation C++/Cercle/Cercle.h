@@ -16,7 +16,7 @@ using namespace std;
 class Cercle : public Figure {
 
 
- private:
+ protected:
     int rayon;
 
 

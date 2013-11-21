@@ -21,6 +21,7 @@ class Segment : public Figure {
 
  public:
 
+	Segment();
 
 	/**
 	*	@params Point2D A, le point de départ A

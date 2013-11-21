@@ -16,6 +16,8 @@ class Parallelogramme : public Quadrilatere {
 
  public:
 
+	Parallelogramme();
+
 	/**
 	*	Constructeur de la class Parallelogramme
 	*	@params Point2D A, le point A du parallélogramme

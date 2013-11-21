@@ -7,7 +7,12 @@
 #include "ArcCercle.h"
 
 	// :Cercle(cercle),angle(angle),pointDepart(pointDepart){}
-        ArcCercle::ArcCercle(Cercle cercle, float angle ,Point2D pointDepart){}
+        ArcCercle::ArcCercle(Cercle cercle, float angle ,Point2D pointDepart){
+		this->A = cercle.getA();
+		this->rayon = cercle.getRayon();
+		this->angle = angle;
+		this->pointDepart = pointDepart;
+	}
 
         float ArcCercle::getAngle(){
 		return this->angle;
