@@ -11,9 +11,9 @@ class VueGraphique : public QGraphicsView
     public:
         VueGraphique();
         QGraphicsScene *scene;
+        QLabel *labelX;
+        QLabel *labelY;
     private :
-        int x;
-        int y;  
         void mouseMoveEvent ( QMouseEvent * event );
 };
 

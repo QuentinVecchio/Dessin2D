@@ -1,11 +1,10 @@
-#include "formcarre.h"
-#include <QColorDialog>
+#include "formtriangle.h"
 
-formCarre::formCarre()
+formTriangle::formTriangle()
 {
 }
 
-void formCarre::affiche()
+void formTriangle::affiche()
 {
     //Init Box le principale qui contient le formulaire
         this->boxPrincipale = new QVBoxLayout();
@@ -13,15 +12,12 @@ void formCarre::affiche()
         this->pointA = new GuiPoint();
         this->pointB = new GuiPoint();
         this->pointC = new GuiPoint();
-        this->pointD = new GuiPoint();
         this->pointA->labelPoint->setText("Point A :");
         this->pointB->labelPoint->setText("Point B :");
         this->pointC->labelPoint->setText("Point C :");
-        this->pointD->labelPoint->setText("Point D :");
         this->pointA->reinit();
         this->pointB->reinit();
         this->pointC->reinit();
-        this->pointD->reinit();
     //Init tous les box horizontales
         this->nomLayout = new QHBoxLayout();
         this->CFondLayout = new QHBoxLayout();
@@ -38,7 +34,6 @@ void formCarre::affiche()
         this->boxPrincipale->addLayout(this->pointA->pointLayout);
         this->boxPrincipale->addLayout(this->pointB->pointLayout);
         this->boxPrincipale->addLayout(this->pointC->pointLayout);
-        this->boxPrincipale->addLayout(this->pointD->pointLayout);
     //Init la couleur du trait
         this->nomCTrait = new QLabel("Couleur du trait :");
         this->btnCTrait = new QPushButton();
@@ -63,13 +58,12 @@ void formCarre::affiche()
         this->boxPrincipale->addLayout(btnLayout);
 }
 
-void formCarre::cache()
+void formTriangle::cache()
 {
     //Suppression points
         this->pointA->detruit();
         this->pointB->detruit();
         this->pointC->detruit();
-        this->pointD->detruit();
     //Suppression nom
         delete this->nomLabel;
         delete this->nomLayout;
@@ -90,42 +84,33 @@ void formCarre::cache()
         delete this->boxPrincipale;
 }
 
-int formCarre::X1()
+int formTriangle::X1()
 {
     return this->pointA->ptx->value();
 }
 
-int formCarre::X2()
+int formTriangle::X2()
 {
     return this->pointB->ptx->value();
 }
 
-int formCarre::Y1()
+int formTriangle::Y1()
 {
     return this->pointA->pty->value();
 }
 
-int formCarre::Y2()
+int formTriangle::Y2()
 {
     return this->pointB->pty->value();
 }
 
-int formCarre::X3()
+int formTriangle::X3()
 {
     return this->pointC->ptx->value();
 }
 
-int formCarre::Y3()
+int formTriangle::Y3()
 {
-    return this->pointC->pty->value();
+    return this->pointC->ptx->value();
 }
 
-int formCarre::X4()
-{
-    return this->pointD->ptx->value();
-}
-
-int formCarre::Y4()
-{
-    return this->pointD->pty->value();
-}

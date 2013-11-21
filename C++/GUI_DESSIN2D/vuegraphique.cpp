@@ -2,23 +2,23 @@
 
 VueGraphique::VueGraphique() : QGraphicsView()
 {
-    this->x = 0;
-    this->y = 0;
+    this->labelX = new QLabel();
+    this->labelY = new QLabel();
     this->scene = new QGraphicsScene();
     this->setScene(this->scene);
-    int i = 0,j = 0;
     //Création de la grille
+    int i = 0,j = 0;
     for (int i = 0; i < 1500; i += 30)
     {
         for (int j = 0; j < 900; j += 30)
         {
-            this->scene->addRect(30,30,i,j,QPen(Qt::gray));
+            this->scene->addRect(25,25,i,j,QPen(Qt::gray));
         }
     }
 }
 
 void VueGraphique::mouseMoveEvent ( QMouseEvent * event )
 {
-    this->x = event->x();
-    this->y = event->y();
+    this->labelX->setText(QString::number(event->x()));
+    this->labelY->setText(QString::number(event->y()));
 }

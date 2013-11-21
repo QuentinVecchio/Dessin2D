@@ -1,27 +1,17 @@
-#include "formcarre.h"
-#include <QColorDialog>
+#include "formcercle.h"
 
-formCarre::formCarre()
+formCercle::formCercle()
 {
 }
 
-void formCarre::affiche()
+void formCercle::affiche()
 {
     //Init Box le principale qui contient le formulaire
         this->boxPrincipale = new QVBoxLayout();
     //Init tous les points
         this->pointA = new GuiPoint();
-        this->pointB = new GuiPoint();
-        this->pointC = new GuiPoint();
-        this->pointD = new GuiPoint();
         this->pointA->labelPoint->setText("Point A :");
-        this->pointB->labelPoint->setText("Point B :");
-        this->pointC->labelPoint->setText("Point C :");
-        this->pointD->labelPoint->setText("Point D :");
         this->pointA->reinit();
-        this->pointB->reinit();
-        this->pointC->reinit();
-        this->pointD->reinit();
     //Init tous les box horizontales
         this->nomLayout = new QHBoxLayout();
         this->CFondLayout = new QHBoxLayout();
@@ -36,9 +26,13 @@ void formCarre::affiche()
         this->lineNom->clear();
     //Init les points
         this->boxPrincipale->addLayout(this->pointA->pointLayout);
-        this->boxPrincipale->addLayout(this->pointB->pointLayout);
-        this->boxPrincipale->addLayout(this->pointC->pointLayout);
-        this->boxPrincipale->addLayout(this->pointD->pointLayout);
+    //init le rayon
+        this->rayonLabel = new QLabel("Rayon :");
+        this->rayonLayout = new QHBoxLayout();
+        this->ChangeRayon = new QSpinBox();
+        this->rayonLayout->addWidget(this->rayonLabel);
+        this->rayonLayout->addWidget(this->ChangeRayon);
+        this->boxPrincipale->addLayout(this->rayonLayout);
     //Init la couleur du trait
         this->nomCTrait = new QLabel("Couleur du trait :");
         this->btnCTrait = new QPushButton();
@@ -63,17 +57,18 @@ void formCarre::affiche()
         this->boxPrincipale->addLayout(btnLayout);
 }
 
-void formCarre::cache()
+void formCercle::cache()
 {
     //Suppression points
         this->pointA->detruit();
-        this->pointB->detruit();
-        this->pointC->detruit();
-        this->pointD->detruit();
     //Suppression nom
         delete this->nomLabel;
         delete this->nomLayout;
         delete this->lineNom;
+    //Suppression du rayon
+        delete this->rayonLabel;
+        delete this->ChangeRayon;
+        delete this->rayonLayout;
     //Suppresion couleur trait
         delete this->nomCTrait;
         delete this->btnCTrait;
@@ -90,42 +85,12 @@ void formCarre::cache()
         delete this->boxPrincipale;
 }
 
-int formCarre::X1()
+int formCercle::X1()
 {
     return this->pointA->ptx->value();
 }
 
-int formCarre::X2()
-{
-    return this->pointB->ptx->value();
-}
-
-int formCarre::Y1()
+int formCercle::Y1()
 {
     return this->pointA->pty->value();
-}
-
-int formCarre::Y2()
-{
-    return this->pointB->pty->value();
-}
-
-int formCarre::X3()
-{
-    return this->pointC->ptx->value();
-}
-
-int formCarre::Y3()
-{
-    return this->pointC->pty->value();
-}
-
-int formCarre::X4()
-{
-    return this->pointD->ptx->value();
-}
-
-int formCarre::Y4()
-{
-    return this->pointD->pty->value();
 }

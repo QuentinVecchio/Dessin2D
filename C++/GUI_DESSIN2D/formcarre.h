@@ -27,14 +27,20 @@ public:
     QPushButton *btnValide;
     QPushButton *btnAnnule;
     QVBoxLayout *boxPrincipale;
+    QLineEdit *lineNom;
+    QPushButton *btnCTrait;
+    QPushButton *btnCFond;
 private:
     GuiPoint *pointA;
     GuiPoint *pointB;
     GuiPoint *pointC;
     GuiPoint *pointD;
     QHBoxLayout * nomLayout;
+    QHBoxLayout * CtraitLayout;
+    QHBoxLayout * CFondLayout;
     QLabel * nomLabel;
-    QLineEdit *lineNom;
+    QLabel * nomCTrait;
+    QLabel * nomCFond;
     QHBoxLayout *btnLayout;
 };
 

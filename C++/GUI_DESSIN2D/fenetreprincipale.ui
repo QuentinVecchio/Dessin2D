@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>641</height>
+    <width>1015</width>
+    <height>644</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -25,18 +25,18 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>230</red>
-        <green>230</green>
-        <blue>230</blue>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>118</red>
-        <green>118</green>
-        <blue>118</blue>
+        <red>102</red>
+        <green>102</green>
+        <blue>102</blue>
        </color>
       </brush>
      </colorrole>
@@ -58,12 +58,21 @@
        </color>
       </brush>
      </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>230</red>
-        <green>230</green>
-        <blue>230</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -88,9 +97,9 @@
      <colorrole role="NoRole">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>25</red>
-        <green>25</green>
-        <blue>25</blue>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
        </color>
       </brush>
      </colorrole>
@@ -99,18 +108,18 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>230</red>
-        <green>230</green>
-        <blue>230</blue>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>118</red>
-        <green>118</green>
-        <blue>118</blue>
+        <red>102</red>
+        <green>102</green>
+        <blue>102</blue>
        </color>
       </brush>
      </colorrole>
@@ -132,12 +141,21 @@
        </color>
       </brush>
      </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>230</red>
-        <green>230</green>
-        <blue>230</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
        </color>
       </brush>
      </colorrole>
@@ -162,9 +180,9 @@
      <colorrole role="NoRole">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>25</red>
-        <green>25</green>
-        <blue>25</blue>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
        </color>
       </brush>
      </colorrole>
@@ -182,9 +200,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>118</red>
-        <green>118</green>
-        <blue>118</blue>
+        <red>102</red>
+        <green>102</green>
+        <blue>102</blue>
        </color>
       </brush>
      </colorrole>
@@ -203,6 +221,15 @@
         <red>51</red>
         <green>51</green>
         <blue>51</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>127</red>
+        <green>127</green>
+        <blue>127</blue>
        </color>
       </brush>
      </colorrole>
@@ -236,9 +263,9 @@
      <colorrole role="NoRole">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>25</red>
-        <green>25</green>
-        <blue>25</blue>
+        <red>204</red>
+        <green>204</green>
+        <blue>204</blue>
        </color>
       </brush>
      </colorrole>
@@ -264,9 +291,15 @@
       <height>541</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0">
+    <layout class="QGridLayout" name="gridLayout" rowstretch="0" columnstretch="0,0,0,0">
      <property name="sizeConstraint">
       <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <property name="horizontalSpacing">
+      <number>0</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>1</number>
      </property>
      <item row="0" column="0">
       <layout class="QVBoxLayout" name="zoneBtnObjet" stretch="0,0,0,0,0,0">
@@ -708,6 +741,9 @@
            </disabled>
           </palette>
          </property>
+         <property name="toolTip">
+          <string>Segment</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -716,6 +752,60 @@
            <normaloff>:/icones/logos/line.png</normaloff>
            <normalon>:/icones/logos/line_focus.png</normalon>
            <selectedon>:/icones/logos/line_focus.png</selectedon>:/icones/logos/line.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnTriangle">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Triangle</string>
+         </property>
+         <property name="text">
+          <string>T</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCarre">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Quadrilatère</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="ressources.qrc">
+           <normaloff>:/icones/logos/carre.png</normaloff>:/icones/logos/carre.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -739,6 +829,9 @@
            <height>32</height>
           </size>
          </property>
+         <property name="toolTip">
+          <string>Multi-Segment</string>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -755,80 +848,15 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btnCarre">
-         <property name="maximumSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ressources.qrc">
-           <normaloff>:/icones/logos/carre.png</normaloff>:/icones/logos/carre.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnPolynome">
-         <property name="maximumSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="ressources.qrc">
-           <normaloff>:/icones/logos/quadrilatere.png</normaloff>:/icones/logos/quadrilatere.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btnTriangle">
-         <property name="maximumSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>4</string>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="default">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="btnCercle">
          <property name="maximumSize">
           <size>
            <width>32</width>
            <height>32</height>
           </size>
+         </property>
+         <property name="toolTip">
+          <string>Cerlce</string>
          </property>
          <property name="text">
           <string/>
@@ -844,6 +872,35 @@
           </size>
          </property>
         </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnEllipse">
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Ellipse</string>
+         </property>
+         <property name="text">
+          <string>E</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="3">
+      <layout class="QHBoxLayout" name="layoutDroit">
+       <item>
+        <layout class="QGridLayout" name="zoneControleObj"/>
        </item>
       </layout>
      </item>
@@ -959,9 +1016,6 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
-      <layout class="QHBoxLayout" name="layoutDroit"/>
-     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -973,9 +1027,83 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>230</red>
+          <green>230</green>
+          <blue>230</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>230</red>
+          <green>230</green>
+          <blue>230</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>x :</string>
        </property>
@@ -983,6 +1111,43 @@
      </item>
      <item>
       <widget class="QLabel" name="labelX">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>0</string>
        </property>
@@ -993,6 +1158,43 @@
      </item>
      <item>
       <widget class="QLabel" name="label_5">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>px</string>
        </property>
@@ -1000,6 +1202,43 @@
      </item>
      <item>
       <widget class="QLabel" name="label_3">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>y :</string>
        </property>
@@ -1007,6 +1246,43 @@
      </item>
      <item>
       <widget class="QLabel" name="labelY">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>0</string>
        </property>
@@ -1017,6 +1293,43 @@
      </item>
      <item>
       <widget class="QLabel" name="label_6">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>230</red>
+             <green>230</green>
+             <blue>230</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Text">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>127</red>
+             <green>127</green>
+             <blue>127</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
        <property name="text">
         <string>px</string>
        </property>
@@ -1030,7 +1343,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1013</width>
+     <width>1015</width>
      <height>22</height>
     </rect>
    </property>

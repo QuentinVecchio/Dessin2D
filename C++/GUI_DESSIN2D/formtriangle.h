@@ -1,5 +1,5 @@
-#ifndef FORMSEGMENT_H
-#define FORMSEGMENT_H
+#ifndef FORMTRIANGLE_H
+#define FORMTRIANGLE_H
 
 #include <QtWidgets>
 #include <QLabel>
@@ -10,17 +10,18 @@
 #include <QString>
 #include "gui_point.h"
 
-
-class formSegment
+class formTriangle
 {
 public:
-    formSegment();
+    formTriangle();
     void cache();
     void affiche();
     int X1();
     int X2();
     int Y1();
     int Y2();
+    int X3();
+    int Y3();
     QPushButton *btnValide;
     QPushButton *btnAnnule;
     QVBoxLayout *boxPrincipale;
@@ -30,11 +31,14 @@ public:
 private:
     GuiPoint *pointA;
     GuiPoint *pointB;
+    GuiPoint *pointC;
     QHBoxLayout * nomLayout;
     QHBoxLayout * CtraitLayout;
+    QHBoxLayout * CFondLayout;
     QLabel * nomLabel;
     QLabel * nomCTrait;
+    QLabel * nomCFond;
     QHBoxLayout *btnLayout;
 };
 
-#endif // FORMSEGMENT_H
+#endif // FORMTRIANGLE_H

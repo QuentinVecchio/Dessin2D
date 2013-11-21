@@ -12,16 +12,20 @@
 #include <QString>
 #include <QMouseEvent>
 #include <QGraphicsSceneMouseEvent>
+#include <vector>
+//Mes objets
 #include "gui_point.h"
 #include "vuegraphique.h"
 #include "formsegment.h"
 #include "formcarre.h"
-#define TAILLE 100
-
+#include "formtriangle.h"
+#include "formcercle.h"
+#include "formelippse.h"
+#include "presentationobjet.h"
+#include "bu.h"
 namespace Ui {
 class fenetrePrincipale;
 }
-enum Objet{SEGMENT, CARRE, TRIANGLE, CERCLE, MULTISEG, ELLIPSE, POLYGONE};//Enumeration des figures
 using namespace std;
 class fenetrePrincipale : public QMainWindow
 {
@@ -30,33 +34,56 @@ public:
     explicit fenetrePrincipale(QWidget *parent = 0);
     ~fenetrePrincipale();
     //Mes fonctions
-        void afficheFormNvObj(int nb);
+        void afficheFormNvObj();
         void traceRec();
         void traceSeg();
         void traceCercle();
         void traceTri();
+        void traceElippse();
         void traceMultiSeg();
 private slots:
     //Slots personnels
         void annuleNouveauObjet();
         void nouveauObjet();
+        void rafraichir();
+        void couleurT();
+        void couleurF();
     //Slots pour les btns de dessin
         void on_btnSegment_clicked();
         void on_btnCarre_clicked();
         void on_btnMultiSegment_clicked();
         void on_btnTriangle_clicked();
+        void on_btnCercle_clicked();
+        void on_btnEllipse_clicked();
     //Slots pour les actions du menus
+        void on_actionImprimer_triggered();
+        void on_actionQuitter_3_triggered();
+        void on_actionPlein_cran_triggered();
+        void on_actionTutoriels_triggered();
+        void on_actionD_veloppeur_triggered();
+        void on_actionZoom_triggered();
+        void on_actionZoom_2_triggered();
+        void on_actionVue_ensemble_triggered();
+        void on_actionCalculette_triggered();
+        void on_actionMath_matique_triggered();
+        void on_actionPr_c_dent_triggered();
+        void on_actionSuivant_triggered();
 private:
     //Variables
         Ui::fenetrePrincipale *ui;
         Objet obj;
-        QPen *pen1;
-        QPen *pen2;
+        QColor colorF;
+        QColor colorT;
     //Fonctions privées
         void changePosCurseur(int x,int y);
     //Formulaire Objets
         formSegment *formSeg;
         formCarre *formCar;
+        formTriangle *formTri;
+        formCercle *formCer;
+        formElippse *formEli;
+    //Dessin technique
+        vector<QDessin> dessin;
 };
 
 #endif // FENETREPRINCIPALE_H

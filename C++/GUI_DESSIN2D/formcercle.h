@@ -1,40 +1,42 @@
-#ifndef FORMSEGMENT_H
-#define FORMSEGMENT_H
+#ifndef FORMCERCLE_H
+#define FORMCERCLE_H
 
 #include <QtWidgets>
 #include <QLabel>
 #include <QLineEdit>
+#include <QSpinBox>
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QString>
 #include "gui_point.h"
 
-
-class formSegment
+class formCercle
 {
 public:
-    formSegment();
+    formCercle();
     void cache();
     void affiche();
     int X1();
-    int X2();
     int Y1();
-    int Y2();
     QPushButton *btnValide;
     QPushButton *btnAnnule;
     QVBoxLayout *boxPrincipale;
+    QSpinBox *ChangeRayon;
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
     QPushButton *btnCFond;
 private:
     GuiPoint *pointA;
-    GuiPoint *pointB;
     QHBoxLayout * nomLayout;
+    QHBoxLayout * rayonLayout;
     QHBoxLayout * CtraitLayout;
+    QHBoxLayout * CFondLayout;
     QLabel * nomLabel;
+    QLabel * rayonLabel;
     QLabel * nomCTrait;
+    QLabel * nomCFond;
     QHBoxLayout *btnLayout;
 };
 
-#endif // FORMSEGMENT_H
+#endif // FORMCERCLE_H
