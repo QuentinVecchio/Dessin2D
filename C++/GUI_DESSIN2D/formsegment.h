@@ -11,8 +11,9 @@
 #include "gui_point.h"
 
 
-class formSegment
+class formSegment: public QWidget
 {
+    Q_OBJECT
 public:
     formSegment();
     void cache();
@@ -26,10 +27,9 @@ public:
     QVBoxLayout *boxPrincipale;
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
-    QPushButton *btnCFond;
-private:
     GuiPoint *pointA;
     GuiPoint *pointB;
+private:
     QHBoxLayout * nomLayout;
     QHBoxLayout * CtraitLayout;
     QLabel * nomLabel;

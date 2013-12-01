@@ -1,6 +1,6 @@
 #include "formsegment.h"
 
-formSegment::formSegment()
+formSegment::formSegment() : QWidget()
 {
 }
 

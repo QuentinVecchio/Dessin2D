@@ -11,8 +11,9 @@
 #include <QString>
 #include "gui_point.h"
 
-class formElippse
+class formElippse: public QWidget
 {
+    Q_OBJECT
 public:
     formElippse();
     void cache();
@@ -28,9 +29,9 @@ public:
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
     QPushButton *btnCFond;
-private:
     GuiPoint *pointA;
     GuiPoint *pointB;
+private:
     QHBoxLayout * nomLayout;
     QHBoxLayout * rayonLayout;
     QHBoxLayout * CtraitLayout;

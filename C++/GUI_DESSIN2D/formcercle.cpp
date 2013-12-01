@@ -1,6 +1,6 @@
 #include "formcercle.h"
 
-formCercle::formCercle()
+formCercle::formCercle() : QWidget()
 {
 }
 

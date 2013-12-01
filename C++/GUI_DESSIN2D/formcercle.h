@@ -11,8 +11,9 @@
 #include <QString>
 #include "gui_point.h"
 
-class formCercle
+class formCercle: public QWidget
 {
+    Q_OBJECT
 public:
     formCercle();
     void cache();
@@ -26,8 +27,8 @@ public:
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
     QPushButton *btnCFond;
-private:
     GuiPoint *pointA;
+private:
     QHBoxLayout * nomLayout;
     QHBoxLayout * rayonLayout;
     QHBoxLayout * CtraitLayout;

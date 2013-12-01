@@ -4,68 +4,73 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
+QT += core gui
+QT += xml
+QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = GUI_DESSIN2D
 TEMPLATE = app
 
-CONFIG -= x86_64
 
 SOURCES += main.cpp\
         fenetreprincipale.cpp \
+    objets/Cercle/Elippse.cpp \
+    objets/Cercle/ArcCercle.cpp \
+    objets/Cercle/Cercle.cpp \
+    objets/Base/Figure.cpp \
+    objets/Base/Point2D.cpp \
+    objets/Base/Segment.cpp \
+    objets/Quadrilatere/Carre.cpp \
+    objets/Quadrilatere/Losange.cpp \
+    objets/Quadrilatere/Parallelogramme.cpp \
+    objets/Quadrilatere/Quadrangle.cpp \
+    objets/Quadrilatere/Quadrilatere.cpp \
+    objets/Quadrilatere/Rectangle.cpp \
+    objets/Triangle/Equilateral.cpp \
+    objets/Triangle/Isocele.cpp \
+    objets/Triangle/TRectangle.cpp \
+    objets/Triangle/Triangle.cpp \
     gui_point.cpp \
     vuegraphique.cpp \
     formsegment.cpp \
     formcarre.cpp \
     formtriangle.cpp \
     formcercle.cpp \
-    figure.cpp \
-    segment.cpp \
-    point2d.cpp \
-    arccercle.cpp \
-    cercle.cpp \
-    carre.cpp \
-    losange.cpp \
-    parallelogramme.cpp \
-    quadrangle.cpp \
-    quadrilatere.cpp \
-    rectangle.cpp \
-    equilateral.cpp \
-    isocele.cpp \
-    trectangle.cpp \
-    triangle.cpp \
     presentationobjet.cpp \
-    formelippse.cpp
+    formelippse.cpp \
+    formmultisegment.cpp
 
 HEADERS  += fenetreprincipale.h \
+    objets/Cercle/Elippse.h \
+    objets/Cercle/ArcCercle.h \
+    objets/Cercle/Cercle.h \
+    objets/Base/Figure.h \
+    objets/Base/Point2D.h \
+    objets/Base/Segment.h \
+    objets/Quadrilatere/Carre.h \
+    objets/Quadrilatere/Losange.h \
+    objets/Quadrilatere/Parallelogramme.h \
+    objets/Quadrilatere/Quadrangle.h \
+    objets/Quadrilatere/Quadrilatere.h \
+    objets/Quadrilatere/Rectangle.h \
+    objets/Triangle/Equilateral.h \
+    objets/Triangle/Isocele.h \
+    objets/Triangle/TRectangle.h \
+    objets/Triangle/Triangle.h \
     gui_point.h \
     vuegraphique.h \
     formsegment.h \
     formcarre.h \
     formtriangle.h \
     formcercle.h \
-    figure.h \
-    segment.h \
-    point2d.h \
-    arccercle.h \
-    cercle.h \
-    carre.h \
-    losange.h \
-    parallelogramme.h \
-    quadrangle.h \
-    quadrilatere.h \
-    rectangle.h \
-    equilateral.h \
-    isocele.h \
-    trectangle.h \
-    triangle.h \
     presentationobjet.h \
     bu.h \
-    formelippse.h
+    formelippse.h \
+    formmultisegment.h
 
 FORMS    += fenetreprincipale.ui
 
 RESOURCES += \
     ressources.qrc
+

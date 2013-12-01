@@ -309,5 +309,7 @@
         <file>logos/64.png</file>
         <file>logos/65.png</file>
         <file>logos/33.png</file>
+        <file>logos/ellipse.png</file>
+        <file>logos/triangle.png</file>
     </qresource>
 </RCC>

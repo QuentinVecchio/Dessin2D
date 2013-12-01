@@ -1,23 +1,23 @@
-#include "formelippse.h"
+#include "formmultisegment.h"
 
-formElippse::formElippse() : QWidget()
+formmultisegment::formmultisegment() : QWidget()
 {
 }
 
-void formElippse::affiche()
+void formmultisegment::affiche(int n)
 {
+    int i;
     //Init Box le principale qui contient le formulaire
         this->boxPrincipale = new QVBoxLayout();
+        this->pointLayout = new QVBoxLayout();
     //Init tous les points
-        this->pointA = new GuiPoint();
-        this->pointB = new GuiPoint();
-        this->pointA->labelPoint->setText("Point A :");
-        this->pointA->reinit();
-        this->pointB->labelPoint->setText("Point B :");
-        this->pointB->reinit();
+        for(i=0;i<n;i++)
+        {
+            GuiPoint *p =  new GuiPoint();
+            this->point.push_back(p);
+        }
     //Init tous les box horizontales
         this->nomLayout = new QHBoxLayout();
-        this->CFondLayout = new QHBoxLayout();
         this->CtraitLayout = new QHBoxLayout();
         this->btnLayout = new QHBoxLayout();
     //Init le nom
@@ -28,15 +28,16 @@ void formElippse::affiche()
         this->boxPrincipale->addLayout(this->nomLayout);
         this->lineNom->clear();
     //Init les points
-        this->boxPrincipale->addLayout(this->pointA->pointLayout);
-        this->boxPrincipale->addLayout(this->pointB->pointLayout);
-    //init le rayon
-        this->rayonLabel = new QLabel("Rayon :");
-        this->rayonLayout = new QHBoxLayout();
-        this->ChangeRayon = new QSpinBox();
-        this->rayonLayout->addWidget(this->rayonLabel);
-        this->rayonLayout->addWidget(this->ChangeRayon);
-        this->boxPrincipale->addLayout(this->rayonLayout);
+        this->nombrePoint = 0;
+        for(i=0;i<n;i++)
+        {
+            GuiPoint *p = this->point[i];
+            p->labelPoint->setText("Point :");
+            p->reinit();
+            this->pointLayout->addLayout(p->pointLayout);
+            this->nombrePoint++;
+        }
+        this->boxPrincipale->addLayout(this->pointLayout);
     //Init la couleur du trait
         this->nomCTrait = new QLabel("Couleur du trait :");
         this->btnCTrait = new QPushButton();
@@ -44,68 +45,60 @@ void formElippse::affiche()
         this->CtraitLayout->addWidget(this->nomCTrait);
         this->CtraitLayout->addWidget(this->btnCTrait);
         this->boxPrincipale->addLayout(this->CtraitLayout);
-    //Init la couleur du fond
-        this->nomCFond = new QLabel("Couleur du fond :");
-        this->btnCFond = new QPushButton();
-        this->btnCFond->setIcon(QIcon(":/icones/logos/water.png"));
-        this->CFondLayout->addWidget(this->nomCFond);
-        this->CFondLayout->addWidget(this->btnCFond);
-        this->boxPrincipale->addLayout(this->CFondLayout);
     //Btn de validation
         this->btnValide = new QPushButton();
         this->btnAnnule = new QPushButton();
+        this->btnAjout = new QPushButton();
         this->btnValide->setIcon(QIcon(":/icones/logos/65.png"));
         this->btnAnnule->setIcon(QIcon(":/icones/logos/64.png"));
+        this->btnAjout->setIcon(QIcon(":/icones/logos/plus-sign.png"));
+        this->btnLayout->addWidget(btnAjout);
         this->btnLayout->addWidget(btnValide);
         this->btnLayout->addWidget(btnAnnule);
         this->boxPrincipale->addLayout(btnLayout);
+        QObject::connect(this->btnAjout,SIGNAL(clicked()),this,SLOT(ajout()));
 }
 
-void formElippse::cache()
+void formmultisegment::cache()
 {
+    int i;
     //Suppression points
-        this->pointA->detruit();
-        this->pointB->detruit();
+        for(i = this->point.size()-1; i >= 0;i--)
+        {
+            GuiPoint *p = this->point[i];
+            p->detruit();
+            this->point.pop_back();
+            this->nombrePoint--;
+        }
+        delete  this->pointLayout;
     //Suppression nom
         delete this->nomLabel;
         delete this->nomLayout;
         delete this->lineNom;
-    //Suppression du rayon
-        delete this->rayonLabel;
-        delete this->ChangeRayon;
-        delete this->rayonLayout;
     //Suppresion couleur trait
         delete this->nomCTrait;
         delete this->btnCTrait;
         delete this->CtraitLayout;
-    //Suppresion couleur trait
-        delete this->nomCFond;
-        delete this->btnCFond;
-        delete this->CFondLayout;
     //Suppresion btn valide
         delete this->btnLayout;
+        delete this->btnAjout;
         delete this->btnValide;
         delete this->btnAnnule;
     //Suppresion de tout le box
         delete this->boxPrincipale;
 }
 
-int formElippse::X1()
+int formmultisegment::Nombre()
 {
-    return this->pointA->ptx->value();
+    return this->nombrePoint;
 }
 
-int formElippse::Y1()
+void formmultisegment::ajout()
 {
-    return this->pointA->pty->value();
-}
-
-int formElippse::X2()
-{
-    return this->pointB->ptx->value();
-}
-
-int formElippse::Y2()
-{
-    return this->pointB->pty->value();
+    GuiPoint *p =  new GuiPoint();
+    this->point.push_back(p);
+    p->labelPoint->setText("Point :");
+    p->reinit();
+    this->pointLayout->addLayout(p->pointLayout);
+    this->nombrePoint++;
 }

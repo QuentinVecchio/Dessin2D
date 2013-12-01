@@ -1,7 +1,6 @@
 #include "formcarre.h"
-#include <QColorDialog>
 
-formCarre::formCarre()
+formCarre::formCarre() : QWidget()
 {
 }
 

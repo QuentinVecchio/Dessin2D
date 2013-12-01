@@ -54,14 +54,14 @@ class Figure {
 	*	@params Point2D point, le déplacement a effectuer sur la figure
 	*
 	*/
-    void translation(Point2D point);
+    virtual void translation(Point2D point);
 
 	/*
 	*	Fonction d'affichage dans le terminal de la figure
 	*	Une figure doit pouvoir être affichée dans le terminal, c'est à dire que l'on représente
 	*	la figure en détaillant ses caractéristiques (les points)
 	*/
-    void affiche(ostream& flux) const;
+    virtual void affiche(ostream& flux) const;
 
 	/*
 	*	Les getters et setters du Point2D A

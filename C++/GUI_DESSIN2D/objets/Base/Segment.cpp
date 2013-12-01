@@ -7,6 +7,8 @@
 #include "Segment.h"
 
 
+Segment::Segment(){}
+
 Segment::Segment(Point2D A, Point2D B):Figure(A),B(B)
 {
 }

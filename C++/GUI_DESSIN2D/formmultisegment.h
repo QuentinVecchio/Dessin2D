@@ -1,5 +1,5 @@
-#ifndef FORMTRIANGLE_H
-#define FORMTRIANGLE_H
+#ifndef FORMMULTISEGMENT_H
+#define FORMMULTISEGMENT_H
 
 #include <QtWidgets>
 #include <QLabel>
@@ -9,37 +9,36 @@
 #include <QVBoxLayout>
 #include <QString>
 #include "gui_point.h"
+#include <vector>
+#include <QObject>
+#include <QWidget>
 
-class formTriangle: public QWidget
+using namespace std;
+class formmultisegment : public QWidget
 {
     Q_OBJECT
 public:
-    formTriangle();
+    formmultisegment();
     void cache();
-    void affiche();
-    int X1();
-    int X2();
-    int Y1();
-    int Y2();
-    int X3();
-    int Y3();
+    void affiche(int n);
+    int Nombre();
+    int nombrePoint;
     QPushButton *btnValide;
     QPushButton *btnAnnule;
+    QPushButton *btnAjout;
     QVBoxLayout *boxPrincipale;
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
-    QPushButton *btnCFond;
-    GuiPoint *pointA;
-    GuiPoint *pointB;
-    GuiPoint *pointC;
+    vector<GuiPoint*> point;
 private:
     QHBoxLayout * nomLayout;
     QHBoxLayout * CtraitLayout;
-    QHBoxLayout * CFondLayout;
     QLabel * nomLabel;
     QLabel * nomCTrait;
-    QLabel * nomCFond;
+    QVBoxLayout *pointLayout;
     QHBoxLayout *btnLayout;
+private slots:
+    void ajout();
 };
 
-#endif // FORMTRIANGLE_H
+#endif // FORMMULTISEGMENT_H

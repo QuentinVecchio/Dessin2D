@@ -10,8 +10,9 @@
 #include <QString>
 #include "gui_point.h"
 
-class formCarre
+class formCarre: public QWidget
 {
+    Q_OBJECT
 public:
     formCarre();
     void cache();
@@ -30,11 +31,11 @@ public:
     QLineEdit *lineNom;
     QPushButton *btnCTrait;
     QPushButton *btnCFond;
-private:
     GuiPoint *pointA;
     GuiPoint *pointB;
     GuiPoint *pointC;
     GuiPoint *pointD;
+private:
     QHBoxLayout * nomLayout;
     QHBoxLayout * CtraitLayout;
     QHBoxLayout * CFondLayout;

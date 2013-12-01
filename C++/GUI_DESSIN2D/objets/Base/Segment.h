@@ -10,7 +10,6 @@
 
 #include "Figure.h"
 #include "Point2D.h"
-#include "Segment.h"
 #include <iostream>
 #include <ostream>
 #include <cmath>
@@ -22,6 +21,7 @@ class Segment : public Figure {
 
  public:
 
+	Segment();
 
 	/**
 	*	@params Point2D A, le point de départ A

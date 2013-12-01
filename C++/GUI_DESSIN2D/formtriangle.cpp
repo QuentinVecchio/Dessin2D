@@ -1,6 +1,6 @@
 #include "formtriangle.h"
 
-formTriangle::formTriangle()
+formTriangle::formTriangle() : QWidget()
 {
 }
 
