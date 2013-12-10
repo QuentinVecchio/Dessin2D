@@ -23,13 +23,6 @@ class Quadrangle : public Quadrilatere {
 	*	@params Point2D D, le point D du Quadrangle
 	*/
     Quadrangle(Point2D A, Point2D B, Point2D C, Point2D D);
-
-	/**
-	*	Fonction qui test si les points correspondent à un quadrangle
-	*	@return true, si c'est un quadrangle
-	*	@return false, sinon
-	*/
-    bool estQuadrangle();
 };
 
 #endif // Quadrangle_h
